@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-espncricinfo",
+  "version": "1.0.0",
+  "description": "An unofficial nodejs wrapper for EspnCricinfo",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags",
+    "lint": "tslint -p tsconfig.json",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cricket",
+    "espncricinfo"
+  ],
+  "author": "Rohin Chopra",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  },
+  "files": ["lib/**/*"]
+}

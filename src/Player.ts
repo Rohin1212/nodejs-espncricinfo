@@ -343,4 +343,5 @@ class Player implements PlayerInterface {
     }
   }
 }
+
 export default Player;

@@ -12,6 +12,6 @@ interface BowlingStatInterface {
   fourWickets: number;
   fiveWickets: number;
   tenWickets: number;
-  [key: string]: number|string;
+  [key: string]: number | string;
 }
 export default BowlingStatInterface;

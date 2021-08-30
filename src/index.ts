@@ -27,13 +27,14 @@ export const searchPlayerByName = async (name: string): Promise<(Player | null)[
       playerIds.push(parseInt(match[0]));
     }
   });
-  
+
   // fetch the players with the given ids
-  const players: (Player | null)[] = await Promise.all(playerIds.map(async (id) => {
-    const player = new Player(id)
-    await player.fetchPlayerDetails()
-    return player
-  }));
+  const players: (Player | null)[] = await Promise.all(
+    playerIds.map(async (id) => {
+      const player = new Player(id);
+      await player.fetchPlayerDetails();
+      return player;
+    })
+  );
   return players;
 };
-
